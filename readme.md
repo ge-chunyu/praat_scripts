@@ -1,6 +1,6 @@
 # My Praat Scripts
 
-This repository stores the Praat scripts I wrote myself. There are a vast amount of praat scripts available, so why write by oneself? The main reason is that I find most of the scripts are too specific and can only serve specific uses. This is not modular and generalizable. As for phonetic studies, a general workflow can be established. I want to capture the essential parts of this workflow and write the basic scripts.
+This repository stores the [Praat](http://www.fon.hum.uva.nl/praat/) scripts I wrote myself. There are a vast amount of praat scripts available, so why write by oneself? The main reason is that I find most of the scripts are too specific and can only serve specific uses. This is not modular and generalizable. As for phonetic studies, a general workflow can be established. I want to capture the essential parts of this workflow and write the basic scripts.
 
 The inspiration and motivation for this repository is the [*Unix philosphy*](https://en.wikipedia.org/wiki/Unix_philosophy). The Unix philosophy requires one tool to do one thing and do it well. 
 
