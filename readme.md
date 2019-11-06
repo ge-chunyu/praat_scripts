@@ -23,3 +23,20 @@ People usually write a for loop and put all the things to do within it. This app
 I included a `script_strcture.praat` script in this repo. It serves as a template for scripting. Simply add `Procedures` at the end of the script and put them into the for loop. This saves a lot of typing.
 
 ## The coherence of environment
+
+## Tips for writing praat scripts
+
+These are some tips I find useful when scripting in Praat:
+
+- Use *variables*, not strings;
+- Name variables in *camel case*, or any other case, but consistently;
+- Name variables with a *human-understandable* meaning;
+- Use *while* loop as little as you can;
+
+## Resources of praat scripts
+
+- [Praat Scripting Tutorial](http://praatscripting.lingphon.net/);
+- [Praat Script Resources](http://phonetics.linguistics.ucla.edu/facilities/acoustic/praat.html);
+- [Praat scripts in the NCSU phonetics lab](https://phon.wordpress.ncsu.edu/lab-manual/scripts/praat-scripting/);
+- [*Using Praat for Linguistic Research*](http://wstyler.ucsd.edu/praat//);
+- 
