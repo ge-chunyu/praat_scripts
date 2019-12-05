@@ -9,5 +9,4 @@ The inspiration and motivation for this repository can be found in my [blog](htt
 - [Praat Scripting Tutorial](http://praatscripting.lingphon.net/);
 - [Praat Script Resources](http://phonetics.linguistics.ucla.edu/facilities/acoustic/praat.html);
 - [Praat scripts in the NCSU phonetics lab](https://phon.wordpress.ncsu.edu/lab-manual/scripts/praat-scripting/);
-- [*Using Praat for Linguistic Research*](http://wstyler.ucsd.edu/praat//);
-- 
+- [*Using Praat for Linguistic Research*](http://wstyler.ucsd.edu/praat//)。
