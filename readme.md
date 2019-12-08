@@ -2,7 +2,7 @@
 
 This repository stores the [Praat](http://www.fon.hum.uva.nl/praat/) scripts I wrote. There are a vast amount of praat scripts available, so why write by oneself? The main reason is that I find most of the scripts are too specific and can only serve specific uses. This is not modular and reproducible.
 
-The inspiration and motivation for this repository can be found in my [blog](https://ge-chunyu.github.com/2019-12-praat/).
+The inspiration and motivation for this repository can be found in my [blog](https://ge-chunyu.github.io/2019-12-praat/).
 
 ## Resources of praat scripts
 
