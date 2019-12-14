@@ -10,7 +10,7 @@ form What you want to do with this script
 comment Where are the files?
 sentence filePath C:/Users/Hu/Desktop/test/
 comment Is this speaker male or female?
-word gender male
+word gender female
 endform
 
 # path normalization
@@ -48,38 +48,34 @@ for i from 1 to stringNum
 	if fileReadable(filePath$ + baseName$ + pitch$)
 		Read from file: filePath$ + baseName$ + pitch$
 		Read from file: filePath$ + baseName$ + ".pitch"
-		selectObject: "PitchTier " + baseName$
-		View & Edit
-		selectObject: "Pitch " + baseName$
-		View & Edit
-		beginPause: "Save & continue"
-		comment: "Do you want to save and continue?"
-		clicked = endPause: "yes", "no", 1
-		if clicked = 1
-			selectObject: "Pitch " + baseName$
-			Save as text file: filePath$ + baseName$ + ".pitch"
-			selectObject: "PitchTier " + baseName$
-			Save as text file: filePath$ + baseName$ + ".PitchTier"
-		endif
 	else
 		selectObject: "Sound " + baseName$
 		To Pitch: 0, floor, ceiling
-		selectObject: "Pitch " + baseName$
+		Rename: "automatic"
+		selectObject: "Pitch automatic"
 		View & Edit
 		pause Confirm
-		selectObject: "Pitch " + baseName$
-		@smooth_pitch: baseName$
+		selectObject: "Pitch automatic"
+		@smooth_pitch: "automatic"
+		Rename: baseName$
 		selectObject: "Pitch interpolate"
-		beginPause: "Save & continue"
-		comment: "Do you want to save and continue?"
-		clicked = endPause: "yes", "no", 1
-		if clicked = 1
-			selectObject: "Pitch interpolate"
-			Save as text file: filePath$ + baseName$ + ".pitch"
-			selectObject: "PitchTier interpolate"
-			Save as text file: filePath$ + baseName$ + ".PitchTier"
-		endif
+		Rename: baseName$
 	endif
+
+	selectObject: "Pitch " + baseName$
+	View & Edit
+	selectObject: "PitchTier " + baseName$
+	View & Edit
+	beginPause: "Save & continue"
+	comment: "Do you want to save and continue?"
+	clicked = endPause: "yes", "no", 1
+	if clicked = 1
+		selectObject: "Pitch " + baseName$
+		Save as text file: filePath$ + baseName$ + ".pitch"
+		selectObject: "PitchTier " + baseName$
+		Save as text file: filePath$ + baseName$ + ".PitchTier"
+	endif
+
 	select all
 	minusObject: "Strings fileList"
 	Remove
