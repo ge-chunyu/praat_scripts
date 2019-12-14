@@ -8,13 +8,15 @@
 
 form Draw pitch 
 comment Where are the files? 
-sentence path D:/honggu/2_annotation/M2/mono/
+sentence path D:/honggu/2_annotation/M2/mono_sen/
 comment Is this speaker male or female?
 word gender male
 comment Which number in the file name represents the tone category?
-integer t 6
+integer t 7
 comment What is the ID of the speaker?
 word speaker M2
+comment The pattern of sound files
+word pattern FF
 comment The file name of the picture
 word picName mono
 comment Where to save the picture file?
@@ -27,7 +29,6 @@ endif
 if right$(picPath$) <> "/"
 		picPath$ = picPath$ + "/"
 endif
-
 
 if gender$ == "male"
 	floor = 75
@@ -49,7 +50,7 @@ rainbow$ [7] = "Maroon"
 rainbow$ [8] = "Navy"
 
 # access the files/directories using `Strings`
-Create Strings as file list: "fileList", path$ + "*" + extension$
+Create Strings as file list: "fileList", path$ + speaker$ + "_" + pattern$ + "*" + extension$
 selectObject: "Strings fileList"
 stringNum = Get number of strings
 Erase all
@@ -78,7 +79,7 @@ Text bottom: "no", "Normalized time"
 Marks right: ceiling / 100 + 1, "yes", "yes", "no"
 
 Select outer viewport: 0, 5, 0, 3
-Save as 600-dpi PNG file: picPath$ + speaker$ + "-" + picName$ + ".png"
+Save as 600-dpi PNG file: picPath$ + speaker$ + "-" + picName$ + pattern$ + ".png"
 
 select all
 Remove
